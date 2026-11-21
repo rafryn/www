@@ -1,0 +1,15 @@
+# Partnerzy – logo: plik w assets/img/partnerzy/ (puste = wyświetla się nazwa)
+tytularny:
+  nazwa: CCC
+  logo: ""
+pozostali:
+  - nazwa: Ecom Software
+    logo: ""
+  - nazwa: CUK
+    logo: ""
+  - nazwa: DT Swiss
+    logo: ""
+  - nazwa: Quest Sport
+    logo: ""
+  - nazwa: Kwiato
+    logo: ""

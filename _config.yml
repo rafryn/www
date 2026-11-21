@@ -1,0 +1,31 @@
+# ===== Ustawienia strony =====
+title: "Copernicus – Akademia Michała Kwiatkowskiego"
+description: "Kolarstwo dla dzieci i młodzieży w Toruniu. Szosa, tor, przełaj i MTB."
+lang: pl
+
+# Adres testowy: https://rafryn.github.io/www/
+# Po przeniesieniu na copernicus-cycling.pl: url: "https://copernicus-cycling.pl", baseurl: ""
+url: "https://rafryn.github.io"
+baseurl: "/www"
+
+# true = baner „wersja testowa” + strona ukryta przed Google. Przed startem zmienić na false.
+wersja_testowa: true
+
+# Dane kontaktowe – uzupełnić (pojawiają się w stopce na każdej stronie)
+kontakt:
+  adres: "[adres klubu]"
+  telefon: "[telefon]"
+  email: "[e-mail]"
+  facebook: "https://www.facebook.com/copernicuscycling"
+  instagram: "https://www.instagram.com/copernicus_amk"
+
+# Aktualności: adres wpisu = /aktualnosci/rok/miesiąc/tytuł/
+permalink: /aktualnosci/:year/:month/:title/
+timezone: Europe/Warsaw
+markdown: kramdown
+
+exclude:
+  - README.md
+  - docs/
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,9 @@
+# Menu główne – kolejność = kolejność na stronie
+- nazwa: O klubie
+  adres: /o-klubie/
+- nazwa: Aktualności
+  adres: /aktualnosci/
+- nazwa: Partnerzy
+  adres: /partnerzy/
+- nazwa: Kontakt
+  adres: "#kontakt"

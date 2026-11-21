@@ -1,0 +1,181 @@
+/* ===== Copernicus – style strony =====
+   Kolory i czcionki w jednym miejscu: zmiana tutaj zmienia całą stronę. */
+:root{
+  --orange:#F2601A;      /* pomarańcz klubowy (tła, przyciski) */
+  --orange-text:#B8430B; /* pomarańcz do tekstu – czytelny na jasnym tle */
+  --ink:#141414;
+  --paper:#F5F3EF;
+  --white:#FFFFFF;
+  --text:#3D3A36;
+  --muted:#5E5B57;
+  --line:#DAD6CF;
+  --soft:#E9E6E0;
+  --radius:6px;
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--ink)}
+a:hover{color:var(--orange-text)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+h1,h2,h3{margin:0}
+p{margin:0}
+
+/* ---- typografia ---- */
+.h{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;letter-spacing:-0.02em;line-height:1.08}
+.h-xxl{font-size:clamp(40px,6vw,64px);line-height:1.02}
+.h-xl{font-size:clamp(32px,4.5vw,44px)}
+.h-lg{font-size:clamp(28px,3.6vw,40px)}
+.h-md{font-size:24px;font-stretch:105%}
+.h-sm{font-size:20px;font-stretch:105%}
+.lead{font-size:clamp(17px,1.6vw,19px);line-height:1.65;color:var(--text);max-width:560px}
+.text{font-size:17px;line-height:1.7;color:var(--text)}
+.eyebrow{font-size:14px;font-weight:600;color:var(--orange-text)}
+.meta{font-size:13px;color:var(--muted)}
+.note{font-size:12px;color:var(--muted)}
+
+/* ---- układ ---- */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.section{padding-top:88px;padding-bottom:88px}
+.section-tight{padding-top:48px;padding-bottom:48px}
+.band-white{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band-dark{background:var(--ink);color:var(--white)}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:48px;align-items:center}
+.split-top{align-items:start}
+.split-end{align-items:end}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:40px 32px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:32px}
+.stack{display:flex;flex-direction:column;gap:20px}
+.stack-sm{display:flex;flex-direction:column;gap:8px}
+.row-between{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:36px}
+.photo{width:100%;object-fit:cover;border-radius:var(--radius)}
+.photo-hero{height:clamp(300px,42vw,520px)}
+.photo-md{height:clamp(260px,34vw,440px)}
+.photo-tall{height:clamp(320px,48vw,620px)}
+
+/* ---- przyciski ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 24px;border-radius:4px;font-weight:700;font-size:16px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-dark{background:var(--ink);color:var(--white)}
+.btn-dark:hover{background:#2c2c2c;color:var(--white)}
+.btn-orange{background:var(--orange);color:var(--ink)}
+.btn-orange:hover{background:#e0530f;color:var(--ink)}
+.btn-line{border-color:var(--ink);font-weight:600}
+.btn-line:hover{background:var(--ink);color:var(--white)}
+.btn-sm{min-height:44px;padding:10px 20px;font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---- nagłówek i menu ---- */
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--white);padding:10px 16px;z-index:10}
+.skip:focus{left:8px}
+.test-bar{background:#FFF0E6;color:#7A2E06;font-size:13px;font-weight:600;text-align:center;padding:8px 16px;border-bottom:1px solid #F4C9AE}
+.site-header{background:var(--white);border-bottom:1px solid var(--line)}
+.header-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:16px;padding-bottom:16px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:2px}
+.brand-name{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;font-size:26px;line-height:1;letter-spacing:.01em}
+.brand-sub{font-size:11px;font-weight:600;color:var(--muted)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;font-size:15px;font-weight:600}
+.nav a{text-decoration:none;padding:8px 0}
+.nav a.btn{padding:10px 20px}
+.nav a[aria-current="page"]:not(.btn){text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:3px;text-underline-offset:8px}
+
+/* ---- liczby ---- */
+.stat{display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--orange);padding-top:16px}
+.stat-num{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;font-size:48px;line-height:1}
+.stat-label{font-size:15px;color:var(--muted)}
+.band-dark .stat-label{color:#CFCBC4}
+
+/* ---- tabela kategorii / listy definicji ---- */
+.cat-table{border-collapse:collapse;width:100%;max-width:460px;font-size:15px}
+.cat-table caption{text-align:left;font-size:13px;font-weight:700;color:var(--muted);padding-bottom:8px}
+.cat-table td{padding:10px 0;border-top:1px solid var(--line)}
+.cat-table tr:last-child td{border-bottom:1px solid var(--line)}
+.cat-table td:last-child{text-align:right;color:var(--muted)}
+.cat-table td:first-child{font-weight:600}
+.facts{margin:0}
+.facts>div{padding:16px 0;border-top:1px solid var(--line)}
+.facts>div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{font-weight:700;font-size:17px}
+.facts dd{margin:4px 0 0;color:var(--muted)}
+
+/* ---- karty wpisów ---- */
+.card a{display:flex;flex-direction:column;gap:12px;text-decoration:none}
+.card img{width:100%;height:220px;object-fit:cover;border-radius:4px}
+.card-title{font-family:Archivo,sans-serif;font-stretch:105%;font-weight:800;font-size:22px;line-height:1.2;letter-spacing:-0.01em}
+.card a:hover .card-title{text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px}
+.feature{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.feature a{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));text-decoration:none}
+.feature img{width:100%;height:100%;min-height:340px;object-fit:cover}
+.feature-body{padding:40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+
+/* ---- kroki „jak zacząć” ---- */
+.cta{background:var(--orange);border-radius:var(--radius);padding:clamp(32px,5vw,56px) clamp(24px,4vw,48px)}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid rgba(20,20,20,.25);font-size:17px;line-height:1.5}
+.steps li:last-child{border-bottom:0}
+.steps .num{font-family:Archivo,sans-serif;font-weight:800;font-size:22px}
+
+/* ---- partnerzy ---- */
+.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:12px}
+.logo-tile{background:var(--white);border:1px solid var(--line);border-radius:4px;height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-weight:700;font-size:17px;color:var(--text);padding:12px;text-align:center}
+.logo-tile img{max-height:56px;width:auto}
+.title-sponsor{background:var(--ink);color:var(--white);border-radius:var(--radius);padding:clamp(28px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.title-sponsor .big{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;font-size:72px;line-height:1}
+.package{border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:16px;background:var(--white)}
+.package .price{font-size:20px;font-weight:700}
+.package ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;color:var(--text)}
+
+/* ---- trenerzy ---- */
+.person-photo{height:260px;background:var(--soft);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted)}
+
+/* ---- zapisy: informacje + formularz ---- */
+.signup{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.signup-info{flex:1 1 360px;min-width:0}
+.info-item{padding:20px 0;border-top:1px solid var(--line)}
+.info-item:last-of-type{border-bottom:1px solid var(--line)}
+.info-item h2{margin-bottom:6px}
+.form{flex:1 1 480px;min-width:0;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:18px}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+.form input:not([type=checkbox]),.form select,.form textarea{font:400 16px Inter,sans-serif;padding:13px 14px;min-height:48px;border:1px solid #BDB8B0;border-radius:4px;background:#FBFAF8;color:var(--ink);width:100%}
+.form textarea{resize:vertical;min-height:90px}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(242,96,26,.2);background:var(--white)}
+.form .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:16px}
+.form .check{flex-direction:row;align-items:flex-start;gap:12px;font-weight:400;line-height:1.5;color:var(--text)}
+.form .check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--orange);flex:none}
+.form-msg{background:#FFF0E6;border:1px solid #F4C9AE;color:#7A2E06;border-radius:4px;padding:14px 16px;font-size:15px;font-weight:600}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-weight:700;font-size:17px;cursor:pointer}
+.faq details p{margin-top:12px;color:var(--text)}
+.rodo{font-size:14px;color:var(--text)}
+.rodo p{margin-bottom:10px}
+
+/* ---- pojedynczy wpis ---- */
+.post{max-width:820px;padding-top:56px;padding-bottom:96px}
+.back{display:inline-block;font-size:15px;font-weight:600;margin-bottom:28px;text-decoration:none}
+.post .meta{margin-bottom:12px}
+.post-photo{margin:32px 0}
+.post-photo img{width:auto;max-width:100%;border-radius:var(--radius)}
+.post-photo figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.prose{font-size:18px;line-height:1.75;color:var(--text)}
+.prose p{margin:0 0 1.1em}
+.prose h2{font-family:Archivo,sans-serif;font-weight:800;font-size:26px;color:var(--ink);margin:1.6em 0 .6em}
+.prose a{color:var(--orange-text)}
+
+/* ---- stopka ---- */
+.site-footer{background:var(--ink);color:#CFCBC4;font-size:15px}
+.site-footer b,.site-footer .brand-name{color:var(--white)}
+.site-footer a{color:#CFCBC4}
+.site-footer a:hover{color:var(--white)}
+.muted-dark{color:#CFCBC4;font-size:14px;line-height:1.6}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:40px;padding-top:64px;padding-bottom:32px}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#A8A49D;border-top:1px solid #333;padding-top:20px;padding-bottom:32px}
+.footer-bottom a{color:#A8A49D}
+
+@media (max-width:640px){
+  .section{padding-top:64px;padding-bottom:64px}
+  .nav{gap:2px 18px}
+  .feature-body{padding:28px 24px}
+  .title-sponsor .big{font-size:56px}
+}
