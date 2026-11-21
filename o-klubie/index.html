@@ -81,3 +81,15 @@ title: O klubie
     </div>
   </div>
 </section>
+
+<section class="wrap section">
+  <h2 class="h h-lg" style="margin-bottom:36px">Zarząd</h2>
+  <ul class="board">
+    {% for o in site.data.zarzad %}
+    <li>
+      <span class="board-role">{{ o.funkcja }}</span>
+      <span class="board-name">{{ o.imie }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
