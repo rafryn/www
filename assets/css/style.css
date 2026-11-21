@@ -136,6 +136,12 @@ p{margin:0}
 /* ---- trenerzy ---- */
 .person-photo{height:260px;background:var(--soft);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted)}
 
+/* ---- zarząd ---- */
+.board{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(150px,100%),1fr));gap:32px 24px}
+.board li{display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--orange);padding-top:14px}
+.board-role{font-size:13px;font-weight:600;color:var(--muted);line-height:1.4}
+.board-name{font-family:Archivo,sans-serif;font-stretch:105%;font-weight:800;font-size:20px;line-height:1.2;letter-spacing:-0.01em}
+
 /* ---- zapisy: informacje + formularz ---- */
 .signup{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
 .signup-info{flex:1 1 360px;min-width:0}
