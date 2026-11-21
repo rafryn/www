@@ -1,0 +1,13 @@
+{% assign t = site.data.partnerzy.tytularny %}
+<div class="logos">
+  <div class="logo-tile">
+    {% if t.logo != "" %}<img src="{{ t.logo | relative_url }}" alt="{{ t.nazwa }}">{% else %}<span class="h" style="font-size:26px">{{ t.nazwa }}</span>{% endif %}
+    <span class="note">sponsor tytularny</span>
+  </div>
+  {% for p in site.data.partnerzy.pozostali %}
+  <div class="logo-tile">
+    {% if p.logo != "" %}<img src="{{ p.logo | relative_url }}" alt="{{ p.nazwa }}">{% else %}{{ p.nazwa }}{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% if site.wersja_testowa %}<p class="note" style="margin-top:12px">Nazwy zastąpią oficjalne logotypy partnerów.</p>{% endif %}

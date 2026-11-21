@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="wrap post">
+  <a class="back" href="{{ '/aktualnosci/' | relative_url }}">← Wszystkie aktualności</a>
+  <p class="meta">{{ page.kategoria }} · {% if page.data_do_uzupelnienia %}[data]{% else %}{% include data.html d=page.date %}{% endif %}</p>
+  <h1 class="h h-xl">{{ page.title }}</h1>
+  {% if page.zdjecie %}
+  <figure class="post-photo">
+    <img src="{{ page.zdjecie | relative_url }}" alt="{{ page.zdjecie_opis }}">
+    {% if page.zdjecie_podpis %}<figcaption>{{ page.zdjecie_podpis }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

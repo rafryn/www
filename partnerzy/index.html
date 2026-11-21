@@ -1,0 +1,79 @@
+---
+layout: default
+title: Partnerzy
+---
+<section class="wrap" style="padding-top:72px;padding-bottom:48px">
+  <div class="split split-end">
+    <h1 class="h h-xxl">Partnerzy</h1>
+    <p class="text">Dzięki firmom, które nas wspierają, młodzi zawodnicy mają sprzęt, wyjazdy na wyścigi i zgrupowania. Dziękujemy – i zapraszamy kolejnych.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="title-sponsor">
+    <div class="stack-sm">
+      <span class="eyebrow" style="color:var(--orange)">Sponsor tytularny</span>
+      <span class="big">{{ site.data.partnerzy.tytularny.nazwa }}</span>
+    </div>
+    <p style="max-width:460px;color:#CFCBC4">[Krótki opis współpracy z CCC – od kiedy, co wspólnie robimy.]</p>
+  </div>
+  <div class="logos" style="margin-top:12px">
+    {% for p in site.data.partnerzy.pozostali %}
+    <div class="logo-tile">{% if p.logo != "" %}<img src="{{ p.logo | relative_url }}" alt="{{ p.nazwa }}">{% else %}{{ p.nazwa }}{% endif %}</div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="h h-lg" style="margin-bottom:12px">Gdzie widać Twoją markę</h2>
+  <p class="text" style="max-width:640px;margin-bottom:40px">Stroje zawodników, flota klubowa, media społecznościowe i wydarzenia, które przyciągają rodziny z całego regionu.</p>
+  <div class="grid-4">
+    <div class="stat"><span class="stat-num" style="font-size:44px">8400+</span><span class="stat-label">obserwujących na Facebooku</span></div>
+    <div class="stat"><span class="stat-num" style="font-size:44px">1000+</span><span class="stat-label">uczestników Festiwalu Rowerowego</span></div>
+    <div class="stat"><span class="stat-num" style="font-size:44px">7</span><span class="stat-label">oklejonych aut klubowych</span></div>
+    <div class="stat"><span class="stat-num" style="font-size:44px">500+</span><span class="stat-label">wejść na stronę miesięcznie</span></div>
+  </div>
+</section>
+
+<section class="band-white">
+  <div class="wrap section">
+    <h2 class="h h-lg" style="margin-bottom:36px">Pakiety partnerskie</h2>
+    <div class="grid-3" style="gap:24px">
+      <div class="package">
+        <h3 class="h h-md">Sponsor strategiczny</h3>
+        <span class="price">70 000 – 149 000 zł</span>
+        <ul>
+          <li>logo na strojach i 7 autach klubowych</li>
+          <li>grafiki i dedykowane posty w mediach społecznościowych</li>
+          <li>logo na stronie i w materiałach dla mieszkańców</li>
+          <li>zaproszenie na zakończenie sezonu</li>
+        </ul>
+      </div>
+      <div class="package">
+        <h3 class="h h-md">Sponsor kategorii</h3>
+        <span class="price">10 000 – 69 000 zł</span>
+        <ul>
+          <li>logo na strojach zawodników</li>
+          <li>grafiki i dedykowane posty w mediach społecznościowych</li>
+          <li>logo na stronie klubu</li>
+          <li>zaproszenie na zakończenie sezonu</li>
+        </ul>
+      </div>
+    </div>
+    <p class="meta" style="margin-top:20px;font-size:14px">Wielkość logo proporcjonalna do pakietu. Pozycja sponsora tytularnego jest zajęta.</p>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="split">
+    <img class="photo photo-md" src="{{ '/assets/img/trenerzy-zawodniczka.jpg' | relative_url }}" alt="Trenerzy klubu z zawodniczką po wyścigu" loading="lazy">
+    <div class="stack">
+      <h2 class="h h-lg">Porozmawiajmy o współpracy</h2>
+      <p class="text">Pełna oferta z wizualizacjami strojów i floty jest w katalogu. Chętnie przygotujemy też propozycję szytą na miarę.</p>
+      <div class="btns">
+        <a class="btn btn-orange" href="#kontakt">[Pobierz katalog (PDF)]</a>
+        <a class="btn btn-line" href="#kontakt">[osoba do kontaktu]</a>
+      </div>
+    </div>
+  </div>
+</section>

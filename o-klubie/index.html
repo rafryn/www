@@ -1,0 +1,83 @@
+---
+layout: default
+title: O klubie
+---
+<section class="wrap" style="padding-top:72px;padding-bottom:40px">
+  <div class="split split-end">
+    <h1 class="h h-xxl">O klubie</h1>
+    <p class="text">Akademia Michała Kwiatkowskiego działa od września 2013 roku w Uczniowskim Klubie Sportowym Copernicus Toruń. Założyło ją środowisko kolarskie skupione wokół toruńskiej Szkoły Mistrzostwa Sportowego – trenerzy, przedsiębiorcy i pasjonaci kolarstwa.</p>
+  </div>
+</section>
+<div class="wrap">
+  <img class="photo photo-md" src="{{ '/assets/img/druzyna-morze.jpg' | relative_url }}" alt="Drużyna Copernicusa w pomarańczowych strojach z rowerami nad morzem">
+</div>
+
+<section class="wrap section">
+  <div class="split split-top">
+    <div class="stack">
+      <p class="eyebrow">Patron</p>
+      <h2 class="h h-lg">Michał Kwiatkowski</h2>
+      <p class="text">Mistrz świata, wielokrotny mistrz Polski i drużynowy mistrz świata. Wychowanek toruńskiego kolarstwa, który dał akademii swoje nazwisko.</p>
+    </div>
+    <div class="stack">
+      <p class="eyebrow">Co robimy</p>
+      <h2 class="h h-lg">Sport wyczynowy i sport dla wszystkich</h2>
+      <p class="text">Szkolimy zawodników na najwyższym poziomie, ale też prowadzimy zajęcia ogólnorozwojowe dla najmłodszych, odwiedzamy szkoły i organizujemy Mistrzostwa Torunia szkół podstawowych. Najlepsi startują w wyścigach zawodowych.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band-white">
+  <div class="wrap section">
+    <h2 class="h h-lg" style="margin-bottom:36px">Czego uczymy</h2>
+    <div class="grid-3">
+      <div class="stack-sm">
+        <img class="photo" style="height:240px" src="{{ '/assets/img/jazda-druzynowa.jpg' | relative_url }}" alt="Drużynowa jazda na czas zawodników Copernicusa" loading="lazy">
+        <h3 class="h h-md" style="margin-top:8px">Szosa</h3>
+        <p class="text" style="font-size:16px">Wyścigi ze startu wspólnego i jazda na czas, także drużynowa. Wytrzymałość, taktyka, jazda w grupie.</p>
+      </div>
+      <div class="stack-sm">
+        <img class="photo" style="height:240px" src="{{ '/assets/img/tor.jpg' | relative_url }}" alt="Zawodniczka na torze kolarskim" loading="lazy">
+        <h3 class="h h-md" style="margin-top:8px">Tor</h3>
+        <p class="text" style="font-size:16px">Dyscyplina, w której zdobyliśmy najwięcej medali mistrzostw Europy i świata. Szybkość i precyzja.</p>
+      </div>
+      <div class="stack-sm">
+        <img class="photo" style="height:240px" src="{{ '/assets/img/przelaj.jpg' | relative_url }}" alt="Zawodnik na trasie przełajowej" loading="lazy">
+        <h3 class="h h-md" style="margin-top:8px">Przełaj i MTB</h3>
+        <p class="text" style="font-size:16px">Technika w terenie i panowanie nad rowerem – najlepsza szkoła dla młodszych kategorii.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="split split-top">
+    <div class="stack">
+      <h2 class="h h-lg">Najważniejsze osiągnięcia</h2>
+      <dl class="facts">
+        <div><dt>Mistrz świata juniorów na torze</dt><dd>Dominik Ratajczak</dd></div>
+        <div><dt>Mistrzyni Europy młodzieżowców na torze</dt><dd>Oliwia Gerc</dd></div>
+        <div><dt>Mistrzowie Europy juniorów na torze</dt><dd>Michał Gałka, Kacper Walkowiak</dd></div>
+        <div><dt>Brązowy medal mistrzostw świata juniorów na szosie</dt><dd>Jan Jackowiak</dd></div>
+        <div><dt>9 zwycięstw w Pucharach Narodów</dt><dd>D. Ratajczak, H. Grygowski, K. Mientki, J. Jackowiak, M. Okrucińska</dd></div>
+        <div><dt>510 medali mistrzostw Polski i MMM</dt><dd>w ciągu 12 lat</dd></div>
+      </dl>
+    </div>
+    <img class="photo photo-tall" src="{{ '/assets/img/reprezentacja.jpg' | relative_url }}" alt="Zawodnik w stroju reprezentacji Polski cieszy się na mecie" loading="lazy">
+  </div>
+</section>
+
+<section class="band-white" style="border-bottom:0">
+  <div class="wrap section">
+    <h2 class="h h-lg" style="margin-bottom:36px">Trenerzy</h2>
+    <div class="grid-4">
+      {% for i in (1..4) %}
+      <div class="stack-sm">
+        <div class="person-photo">[zdjęcie]</div>
+        <b style="font-size:17px">[Imię i nazwisko]</b>
+        <span class="meta" style="font-size:14px">[funkcja, grupa]</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

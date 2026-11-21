@@ -1,0 +1,86 @@
+---
+layout: default
+title: Strona główna
+---
+<section class="wrap section-tight" style="padding-top:72px">
+  <div class="split">
+    <div class="stack">
+      <p class="eyebrow">UKS Copernicus Toruń · od 2013 roku</p>
+      <h1 class="h h-xxl">Kolarstwo dla dzieci i młodzieży w Toruniu.</h1>
+      <p class="lead">Szosa, tor, przełaj i MTB. Przyjmujemy od 10. roku życia i prowadzimy zawodników aż do kategorii młodzieżowca.</p>
+      <div class="btns" style="margin-top:8px">
+        <a class="btn btn-dark" href="{{ '/zapisy/' | relative_url }}">Zapisz dziecko na trening</a>
+        <a class="btn btn-line" href="{{ '/o-klubie/' | relative_url }}">Poznaj klub</a>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <img class="photo photo-hero" src="{{ '/assets/img/meta-radosc.jpg' | relative_url }}" alt="Zawodniczka Copernicusa cieszy się na mecie z rozłożonymi rękami">
+    </figure>
+  </div>
+</section>
+
+<section class="band-dark" style="margin-top:40px">
+  <div class="wrap grid-4" style="padding-top:56px;padding-bottom:56px">
+    <div class="stat"><span class="stat-num">13</span><span class="stat-label">lat działalności akademii</span></div>
+    <div class="stat"><span class="stat-num">26</span><span class="stat-label">medali mistrzostw Europy i świata</span></div>
+    <div class="stat"><span class="stat-num">510</span><span class="stat-label">medali mistrzostw Polski i MMM w 12 lat</span></div>
+    <div class="stat"><span class="stat-num">9</span><span class="stat-label">zwycięstw w Pucharach Narodów</span></div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="split">
+    <img class="photo photo-md" src="{{ '/assets/img/szkoly-start.jpg' | relative_url }}" alt="Kilkaset dzieci pod bramą startową Copernicus podczas szkolnych zawodów" loading="lazy">
+    <div class="stack">
+      <h2 class="h h-lg">Od szkolnego wyścigu do reprezentacji Polski</h2>
+      <p class="text">Co roku, wspólnie z Gminą Miasta Toruń, organizujemy Mistrzostwa Torunia w kolarstwie dla szkół podstawowych – na starcie staje około 200 dzieci. Odwiedzamy też szkoły w powiecie toruńskim. Najlepsi z naszych wychowanków ścigają się dziś w zespołach zawodowych.</p>
+      <table class="cat-table">
+        <caption>Kategorie szkoleniowe</caption>
+        <tbody>
+          <tr><td>Żak</td><td>od 10 lat</td></tr>
+          <tr><td>Młodzik</td><td>[wiek]</td></tr>
+          <tr><td>Junior młodszy</td><td>[wiek]</td></tr>
+          <tr><td>Junior</td><td>[wiek]</td></tr>
+          <tr><td>Młodzieżowiec</td><td>do 22 lat</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band-white">
+  <div class="wrap section">
+    <div class="row-between">
+      <h2 class="h h-lg">Aktualności</h2>
+      <a href="{{ '/aktualnosci/' | relative_url }}" style="font-weight:600">Wszystkie wpisy →</a>
+    </div>
+    <div class="grid-3">
+      {% for post in site.posts limit:3 %}
+        {% include karta-wpisu.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="cta split">
+    <div class="stack">
+      <h2 class="h h-xl">Chcesz spróbować?</h2>
+      <p style="font-size:17px">Pierwszy trening jest bez zobowiązań. Odpowiadamy na zgłoszenia w ciągu 3 dni roboczych.</p>
+      <a class="btn btn-dark" style="align-self:flex-start" href="{{ '/zapisy/' | relative_url }}">Przejdź do zapisów</a>
+    </div>
+    <ol class="steps">
+      <li><span class="num">1</span><span><b>Wypełnij formularz</b> – zajmuje ok. 3 minuty.</span></li>
+      <li><span class="num">2</span><span><b>Dobierzemy grupę</b> do wieku i doświadczenia.</span></li>
+      <li><span class="num">3</span><span><b>Przyjdź na trening</b> – termin i miejsce dostaniesz e-mailem.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:96px">
+  <div class="row-between" style="margin-bottom:24px">
+    <h2 class="h" style="font-size:28px">Wspierają nas</h2>
+    <a href="{{ '/partnerzy/' | relative_url }}" style="font-weight:600">Zostań partnerem →</a>
+  </div>
+  {% include logotypy.html %}
+</section>

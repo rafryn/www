@@ -1,0 +1,3 @@
+{%- comment -%} Data po polsku, np. „28 września 2025”. Użycie: {% include data.html d=post.date %} {%- endcomment -%}
+{%- assign m = include.d | date: "%-m" | minus: 1 -%}
+{{- include.d | date: "%-d" }} {{ site.data.miesiace[m] }} {{ include.d | date: "%Y" -}}
