@@ -1,15 +1,43 @@
-# Partnerzy – logo: plik w assets/img/partnerzy/ (puste = wyświetla się nazwa)
-tytularny:
-  nazwa: CCC
-  logo: ""
-pozostali:
-  - nazwa: Ecom Software
-    logo: ""
-  - nazwa: CUK
-    logo: ""
-  - nazwa: DT Swiss
-    logo: ""
-  - nazwa: Quest Sport
-    logo: ""
+# Partnerzy – zgodnie z roll-upem 10/2026.
+# Logo: plik w assets/img/partnerzy/ (PNG z przezroczystym tłem, wysokość ok. 120 px).
+# Kolejność w grupie = kolejność na stronie. Puste logo = wyświetla się nazwa.
+
+glowni:
+  - nazwa: MODIVO
+    logo: /assets/img/partnerzy/modivo.png
+  - nazwa: CCC
+    logo: /assets/img/partnerzy/ccc.png
   - nazwa: Kwiato
-    logo: ""
+    logo: /assets/img/partnerzy/kwiato.png
+  - nazwa: Ecom
+    logo: /assets/img/partnerzy/ecom.png
+
+partnerzy:
+  - nazwa: CUK Ubezpieczenia
+    logo: /assets/img/partnerzy/cuk.png
+  - nazwa: DT4YOU
+    logo: /assets/img/partnerzy/dt4you.png
+  - nazwa: DT Swiss
+    logo: /assets/img/partnerzy/dtswiss.png
+  - nazwa: Gołaś Bikes
+    logo: /assets/img/partnerzy/golas.png
+  - nazwa: OC1
+    logo: /assets/img/partnerzy/oc1.png
+  - nazwa: LODO
+    logo: /assets/img/partnerzy/lodo.png
+  - nazwa: Seban
+    logo: /assets/img/partnerzy/seban.png
+  - nazwa: Quest Sportswear
+    logo: /assets/img/partnerzy/quest.png
+
+samorzady:
+  - nazwa: Miasto Toruń
+    logo: /assets/img/partnerzy/torun.png
+  - nazwa: Województwo Kujawsko-Pomorskie
+    logo: /assets/img/partnerzy/wojewodztwo.png
+
+wspolpraca:
+  - nazwa: Szkoła Mistrzostwa Sportowego w Toruniu
+    logo: /assets/img/partnerzy/sms.png
+  - nazwa: LZS
+    logo: /assets/img/partnerzy/lzs.png

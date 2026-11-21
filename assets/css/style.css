@@ -72,7 +72,8 @@ p{margin:0}
 .test-bar{background:#FFF0E6;color:#7A2E06;font-size:13px;font-weight:600;text-align:center;padding:8px 16px;border-bottom:1px solid #F4C9AE}
 .site-header{background:var(--white);border-bottom:1px solid var(--line)}
 .header-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:16px;padding-bottom:16px}
-.brand{text-decoration:none;display:flex;flex-direction:column;gap:2px}
+.brand{text-decoration:none;display:flex;flex-direction:column;gap:6px}
+.brand-logo{height:26px;width:auto}
 .brand-name{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;font-size:26px;line-height:1;letter-spacing:.01em}
 .brand-sub{font-size:11px;font-weight:600;color:var(--muted)}
 .nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;font-size:15px;font-weight:600}
@@ -117,9 +118,14 @@ p{margin:0}
 .steps .num{font-family:Archivo,sans-serif;font-weight:800;font-size:22px}
 
 /* ---- partnerzy ---- */
-.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:12px}
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(170px,100%),1fr));gap:12px}
 .logo-tile{background:var(--white);border:1px solid var(--line);border-radius:4px;height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-weight:700;font-size:17px;color:var(--text);padding:12px;text-align:center}
-.logo-tile img{max-height:56px;width:auto}
+.logo-tile img{max-height:52px;max-width:85%;width:auto;height:auto;object-fit:contain}
+.logos-lg{grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))}
+.logos-lg .logo-tile{height:130px}
+.logos-lg .logo-tile img{max-height:64px}
+.logo-group{margin-top:48px}
+.logo-group h2{margin-bottom:16px}
 .title-sponsor{background:var(--ink);color:var(--white);border-radius:var(--radius);padding:clamp(28px,4vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
 .title-sponsor .big{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;font-size:72px;line-height:1}
 .package{border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:16px;background:var(--white)}

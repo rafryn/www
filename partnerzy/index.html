@@ -10,17 +10,22 @@ title: Partnerzy
 </section>
 
 <section class="wrap">
-  <div class="title-sponsor">
-    <div class="stack-sm">
-      <span class="eyebrow" style="color:var(--orange)">Sponsor tytularny</span>
-      <span class="big">{{ site.data.partnerzy.tytularny.nazwa }}</span>
-    </div>
-    <p style="max-width:460px;color:#CFCBC4">[Krótki opis współpracy z CCC – od kiedy, co wspólnie robimy.]</p>
+  <h2 class="h h-md" style="margin-bottom:16px">Sponsorzy główni</h2>
+  {% include kafle-logo.html lista=site.data.partnerzy.glowni duze=true %}
+
+  <div class="logo-group">
+    <h2 class="h h-md">Partnerzy</h2>
+    {% include kafle-logo.html lista=site.data.partnerzy.partnerzy %}
   </div>
-  <div class="logos" style="margin-top:12px">
-    {% for p in site.data.partnerzy.pozostali %}
-    <div class="logo-tile">{% if p.logo != "" %}<img src="{{ p.logo | relative_url }}" alt="{{ p.nazwa }}">{% else %}{{ p.nazwa }}{% endif %}</div>
-    {% endfor %}
+
+  <div class="logo-group">
+    <h2 class="h h-md">Wspierają nas samorządy</h2>
+    {% include kafle-logo.html lista=site.data.partnerzy.samorzady %}
+  </div>
+
+  <div class="logo-group">
+    <h2 class="h h-md">Współpracujemy</h2>
+    {% include kafle-logo.html lista=site.data.partnerzy.wspolpraca %}
   </div>
 </section>
 
@@ -60,7 +65,7 @@ title: Partnerzy
         </ul>
       </div>
     </div>
-    <p class="meta" style="margin-top:20px;font-size:14px">Wielkość logo proporcjonalna do pakietu. Pozycja sponsora tytularnego jest zajęta.</p>
+    <p class="meta" style="margin-top:20px;font-size:14px">Wielkość logo proporcjonalna do pakietu.</p>
   </div>
 </section>
 

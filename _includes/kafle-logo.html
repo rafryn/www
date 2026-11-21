@@ -1,0 +1,8 @@
+{%- comment -%} Siatka logotypów. Użycie: {% include kafle-logo.html lista=site.data.partnerzy.glowni duze=true %} {%- endcomment -%}
+<div class="logos{% if include.duze %} logos-lg{% endif %}">
+  {% for p in include.lista %}
+  <div class="logo-tile">
+    {% if p.logo and p.logo != "" %}<img src="{{ p.logo | relative_url }}" alt="{{ p.nazwa }}">{% else %}{{ p.nazwa }}{% endif %}
+  </div>
+  {% endfor %}
+</div>
