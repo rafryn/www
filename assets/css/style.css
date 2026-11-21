@@ -71,9 +71,10 @@ p{margin:0}
 .skip:focus{left:8px}
 .test-bar{background:#FFF0E6;color:#7A2E06;font-size:13px;font-weight:600;text-align:center;padding:8px 16px;border-bottom:1px solid #F4C9AE}
 .site-header{background:var(--white);border-bottom:1px solid var(--line)}
-.header-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:16px;padding-bottom:16px}
+.header-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:14px;padding-bottom:14px}
 .brand{text-decoration:none;display:flex;flex-direction:column;gap:6px}
-.brand-logo{height:26px;width:auto}
+.brand-logo{height:60px;width:auto;display:block}
+@media (max-width:640px){.brand-logo{height:46px}}
 .brand-name{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:800;font-size:26px;line-height:1;letter-spacing:.01em}
 .brand-sub{font-size:11px;font-weight:600;color:var(--muted)}
 .nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;font-size:15px;font-weight:600}
