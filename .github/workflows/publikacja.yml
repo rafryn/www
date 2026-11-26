@@ -1,0 +1,58 @@
+# Publikacja strony: zmniejsza zdjęcia (i usuwa z nich GPS), buduje stronę i wystawia ją na GitHub Pages.
+# Wymaga: Settings → Pages → Source: „GitHub Actions”.
+name: Publikacja strony
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zmniejsz zdjęcia i usuń metadane
+        run: |
+          pip install --quiet pillow
+          python3 .github/scripts/zdjecia.py assets/img
+
+      - name: Zapisz poprawione zdjęcia w repozytorium
+        run: |
+          if [ -n "$(git status --porcelain assets/img)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/img
+            git commit -m "Zdjęcia: zmniejszenie i usunięcie metadanych (automat)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,52 @@
+# Panel do aktualności – Pages CMS (https://app.pagescms.org)
+# Autor wpisów widzi tylko „Aktualności” i zdjęcia; reszty strony nie zmieni.
+
+media:
+  input: assets/img/aktualnosci
+  output: /assets/img/aktualnosci
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+settings:
+  commit:
+    identity: user
+
+content:
+  - name: aktualnosci
+    label: Aktualności
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{title}.md"
+    view:
+      primary: title
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+        description: "Krótko i konkretnie, np. „Mikołajkowy trening z rekordową frekwencją”."
+      - name: kategoria
+        label: Kategoria
+        type: select
+        required: true
+        options:
+          values: [Szosa, Tor, Przełaj, Szkoły, Z życia klubu, Partnerzy]
+      - name: zdjecie
+        label: Zdjęcie główne
+        type: image
+        required: true
+        description: "Poziome zdjęcie. Dzieci tylko ze zgodą rodziców na publikację wizerunku."
+      - name: zdjecie_opis
+        label: Co widać na zdjęciu
+        type: string
+        required: true
+        description: "Jedno zdanie – dla osób niewidomych i dla Google, np. „Grupa żaków na starcie wyścigu”."
+      - name: zdjecie_podpis
+        label: Podpis pod zdjęciem (opcjonalnie)
+        type: string
+        description: "Np. „Fot. Jan Kowalski”."
+      - name: body
+        label: Treść
+        type: rich-text
+        required: true
+        description: "Pierwszy akapit pokazuje się jako zapowiedź na liście aktualności."

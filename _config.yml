@@ -21,6 +21,14 @@ kontakt:
 
 # Aktualności: adres wpisu = /aktualnosci/rok/miesiąc/tytuł/
 permalink: /aktualnosci/:year/:month/:title/
+
+# Każdy wpis w _posts automatycznie używa układu „post” (panel nie musi tego ustawiać)
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 timezone: Europe/Warsaw
 markdown: kramdown
 

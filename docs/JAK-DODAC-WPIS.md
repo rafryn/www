@@ -1,36 +1,34 @@
-# Jak dodać aktualność (ok. 10 minut)
+# Jak dodać aktualność – instrukcja dla autora (ok. 5 minut)
 
-## Sposób 1 – przez Claude (najprościej)
-Wklej w rozmowie z Claude tytuł, tekst i zdjęcie. Claude przygotuje wpis jako propozycję zmian, a Ty klikasz **Merge** na GitHubie.
+## Pierwsze logowanie (raz)
+1. Otwórz zaproszenie z e-maila od Pages CMS i kliknij link.
+2. Zaloguj się (link w e-mailu albo konto GitHub, jeśli je masz).
+3. Zapisz w telefonie/przeglądarce adres panelu: **https://app.pagescms.org**
 
-## Sposób 2 – samodzielnie na GitHubie
-1. **Zdjęcie:** wejdź do folderu `assets/img` → **Add file → Upload files** → wgraj zdjęcie.
-   Nazwa bez spacji i polskich znaków, np. `mistrzostwa-polski-2026.jpg`. Najlepiej ok. 1400 px szerokości.
-2. **Wpis:** wejdź do folderu `_posts` → **Add file → Create new file**.
-   Nazwa pliku: `RRRR-MM-DD-tytul-bez-polskich-znakow.md`, np. `2026-12-05-mikolajkowy-trening.md`.
-3. Wklej wzór i podmień treść:
+## Nowy wpis
+1. W panelu wybierz **Aktualności** → **Add an entry** (Dodaj wpis).
+2. Wypełnij pola:
+   - **Tytuł** – krótko i konkretnie, np. „Mikołajkowy trening z rekordową frekwencją”.
+   - **Kategoria** – wybierz z listy.
+   - **Zdjęcie główne** – najlepiej poziome. Zdjęcie z telefonu jest OK: strona sama je zmniejszy i usunie z niego lokalizację GPS.
+   - **Co widać na zdjęciu** – jedno zdanie, np. „Grupa żaków na starcie wyścigu”.
+   - **Podpis** – opcjonalnie, np. „Fot. Jan Kowalski”.
+   - **Treść** – 3–6 zdań. Pierwszy akapit to zapowiedź na liście aktualności.
+3. Kliknij **Save** (Zapisz). Wpis pojawi się na stronie po 2–3 minutach.
 
-```
----
-layout: post
-title: "Tytuł wpisu"
-kategoria: Szosa
-zdjecie: /assets/img/nazwa-zdjecia.jpg
-zdjecie_opis: "Krótki opis, co widać na zdjęciu"
----
-Pierwszy akapit – to on pokaże się jako zapowiedź na liście aktualności.
-
-Kolejne akapity oddzielaj pustą linią.
-
-**Pogrubienie** i [link](https://adres.pl) działają tak jak tutaj.
-```
-
-4. Kliknij **Commit changes**. Wpis pojawi się na stronie po 1–2 minutach.
-
-## Kategorie (wpisuj dokładnie tak)
-Szosa · Tor · Przełaj · Szkoły · Z życia klubu · Partnerzy
+## Poprawka lub usunięcie
+Otwórz wpis z listy w panelu, popraw i zapisz. Każda zmiana ma historię – pomyłkę da się cofnąć.
 
 ## Zasady
-- Zdjęcia dzieci tylko ze zgodą rodziców na publikację wizerunku.
-- Nie wpisuj danych osobowych poza imieniem i nazwiskiem zawodnika oraz wynikiem.
-- Pomyłka? Każda zmiana ma historię – w zakładce **Commits** można ją cofnąć.
+- **Zdjęcia dzieci tylko ze zgodą rodziców** na publikację wizerunku.
+- Bez danych osobowych poza imieniem i nazwiskiem zawodnika oraz wynikiem.
+- Bez nazwisk dzieci przy zdjęciach grupowych z zajęć dla najmłodszych.
+- Wpis najlepiej do 48 godzin po wydarzeniu. Ten sam tekst + link do wpisu na Facebooku.
+
+---
+
+## Dla administratora (konfiguracja panelu)
+- Ustawienia panelu: plik `.pages.yml` (pola formularza, folder zdjęć `assets/img/aktualnosci`).
+- Automatyczne zmniejszanie zdjęć i usuwanie metadanych: `.github/workflows/publikacja.yml` + `.github/scripts/zdjecia.py`.
+- Autorzy zaproszeni e-mailem widzą tylko Aktualności i zdjęcia. Nie mogą zmieniać `.pages.yml`, innych podstron ani zapraszać kolejnych osób.
+- Bez panelu: wpis to plik `_posts/RRRR-MM-DD-tytul.md` (wzór: dowolny istniejący wpis).
